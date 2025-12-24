@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hardware Mania</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Background -->
+  <video class="bg-video" autoplay muted loop playsinline>
+    <source src="assets/bg-video.mp4" type="video/mp4">
+  </video>
+  <div class="overlay"></div>
+
+  <!-- Pages -->
+  <div class="pages" id="pages">
+
+    <!-- HOME -->
+    <section class="page home">
+      <div class="top-brand">
+        <img src="assets/college-logo.jpg" alt="College Logo">
+        <h2>Ramanand Arya D.A.V College (Autonomous)</h2>
+      </div>
+
+      <div class="center-content">
+        <h1 class="event-title">HARDWARE<br><span>MANIA</span></h1>
+      </div>
+
+      <div class="incharge left">
+        <h4>Event In-Charge</h4>
+        <p>Swati Kemkar </p>
+      </div>
+
+      <div class="incharge right">
+        <h4>Event In-Charge</h4>
+        <p>Suvarna Mali</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="page contact">
+      <h1 class="section-title">EVENT HANDLERS</h1>
+
+      <div class="handlers-pyramid">
+
+        <div class="row">
+          <div class="handler-card">
+            <img src="assets/handlers/h1.jpg">
+            <h3>Name 1</h3>
+            <p>Lead Coordinator</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="handler-card"><img src="assets/handlers/h1.jpg"><h3>Name 2</h3><p>Core Team</p></div>
+          <div class="handler-card"><img src="assets/handlers/h1.jpg"><h3>Name 3</h3><p>Core Team</p></div>
+          
+        </div>
+
+        <div class="row">
+          <div class="handler-card"><img src="assets/handlers/h1.jpg"><h3>Name 4</h3><p>Support</p></div>
+          <div class="handler-card"><img src="assets/handlers/h1.jpg"><h3>Name 5</h3><p>Support</p></div>
+          <div class="handler-card"><img src="assets/handlers/h1.jpg"><h3>Name 6</h3><p>Support</p></div>
+        </div>
+
+        <div class="row">
+          <div class="handler-card"><img src="assets/handlers/h1.jpg"><h3>Name 7</h3><p>Volunteer</p></div>
+          <div class="handler-card"><img src="assets/handlers/h1.jpg"><h3>Name 8</h3><p>Volunteer</p></div>
+          <div class="handler-card"><img src="assets/handlers/h1.jpg"><h3>Name 9</h3><p>Volunteer</p></div>
+        </div>
+
+        <div class="row">
+          <div class="handler-card"><img src="assets/handlers/h1.jpg"><h3>Name 10</h3><p>Volunteer</p></div>
+          <div class="handler-card"><img src="assets/handlers/h1.jpg"><h3>Name 11</h3><p>Volunteer</p></div>
+          <div class="handler-card"><img src="assets/handlers/h1.jpg"><h3>Name 12</h3><p>Volunteer</p></div>
+          <div class="handler-card"><img src="assets/handlers/h1.jpg"><h3>Name 13</h3><p>Volunteer</p></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- RESULT -->
+    <!-- RESULT -->
+  <section class="page result">
+    <h1 class="section-title">QUALIFIED PARTICIPANTS</h1>
+
+    <div class="result-wrapper">
+      <table class="result-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>College</th>
+          </tr>
+        </thead>
+        <tbody id="resultList">
+          <tr>
+            <td colspan="2">Results coming soon</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+</div>
+
+
+  <!-- Tabs -->
+  <nav class="tabs">
+    <button class="active" onclick="goToPage(0)">Home</button>
+    <button onclick="goToPage(1)">Contact</button>
+    <button onclick="goToPage(2)">Result</button>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>
