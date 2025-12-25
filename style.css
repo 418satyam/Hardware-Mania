@@ -1,4 +1,4 @@
-/* ================= RESET ================= */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -6,12 +6,16 @@
   font-family: Arial, sans-serif;
 }
 
-body {
-  color: white;
-  overflow: hidden;
+html, body {
+  height: 100%;
 }
 
-/* ================= BACKGROUND ================= */
+body {
+  color: white;
+  overflow-x: hidden;
+}
+
+/* BACKGROUND */
 .bg-video {
   position: fixed;
   inset: 0;
@@ -28,11 +32,11 @@ body {
   z-index: -1;
 }
 
-/* ================= PAGES ================= */
+/* PAGE SLIDER */
 .pages {
   display: flex;
-  width: 150;
-  transition: transform 0.4s ease;
+  width: 300%;
+  transition: transform 0.5s ease;
 }
 
 .page {
@@ -52,10 +56,10 @@ body {
 }
 
 .center-content {
+  min-height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 80px;
 }
 
 .event-title {
@@ -69,48 +73,58 @@ body {
 }
 
 .incharge {
-  margin-top: 30px;
+  font-size: 16px;
+  margin-top: 20px;
   text-align: center;
-  font-size: 14px;
 }
 
-/* ================= SECTION TITLE ================= */
+/* Desktop positioning */
+@media (min-width: 900px) {
+  .incharge {
+    position: absolute;
+    bottom: 80px;
+  }
+  .incharge.left { left: 40px; }
+  .incharge.right { right: 40px; }
+}
+
+/* ================= TITLES ================= */
 .section-title {
   text-align: center;
-  font-size: 1.8rem;
   margin: 20px 0;
+  font-size: 2rem;
 }
 
 /* ================= CONTACT ================= */
 .page.contact {
   overflow-y: auto;
-  padding-bottom: 90px;
+  padding-bottom: 120px;
+  -webkit-overflow-scrolling: touch;
 }
 
-/* MOBILE-FIRST HANDLER LIST */
 .handlers-pyramid {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 22px;
+  gap: 32px;
+  margin-top: 30px;
 }
 
 .handlers-pyramid .row {
   display: flex;
-  flex-direction: column;
-  gap: 22px;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
 }
 
-/* HANDLER CARD */
 .handler-card {
-  width: 90%;
-  max-width: 260px;
+  width: 200px;
   text-align: center;
 }
 
 .handler-card img {
   width: 100%;
-  height: 220px;
+  height: 240px;
   object-fit: cover;
   border-radius: 10px;
   border: 2px solid rgba(0,255,255,0.6);
@@ -118,24 +132,26 @@ body {
 }
 
 .handler-card h3 {
-  margin-top: 8px;
+  margin-top: 10px;
   font-size: 15px;
 }
 
 .handler-card p {
   font-size: 13px;
-  opacity: 0.7;
+  opacity: 0.75;
 }
 
 /* ================= RESULT ================= */
 .page.result {
-  padding-bottom: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  -webkit-overflow-scrolling: touch;
 }
 
 .result-wrapper {
-  max-width: 95%;
-  margin: 0 auto;
-  max-height: 60vh;
+  width: 100%;
+  max-width: 700px;
   overflow-y: auto;
   border: 1px solid cyan;
 }
@@ -148,10 +164,9 @@ body {
 
 .result-table th,
 .result-table td {
-  padding: 10px;
+  padding: 12px;
   text-align: center;
   border-bottom: 1px solid rgba(0,255,255,0.3);
-  font-size: 14px;
 }
 
 .result-table th {
@@ -167,15 +182,16 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-around;
-  background: rgba(0,0,0,0.95);
+  background: rgba(0,0,0,0.9);
+  z-index: 10;
 }
 
 .tabs button {
   background: none;
   border: none;
   color: white;
-  padding: 12px;
-  font-size: 14px;
+  padding: 14px;
+  font-size: 16px;
 }
 
 .tabs button.active {
@@ -183,39 +199,36 @@ body {
   border-bottom: 2px solid cyan;
 }
 
-/* ================= TABLET ================= */
-@media (min-width: 600px) {
+/* ================= MOBILE & TABLET FIX ================= */
+@media (max-width: 900px) {
+
   .handlers-pyramid .row {
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
   }
 
   .handler-card {
-    width: 200px;
-  }
-}
-
-/* ================= DESKTOP ================= */
-@media (min-width: 992px) {
-  .handlers-pyramid {
-    gap: 40px;
+    width: 100%;
   }
 
-  .handlers-pyramid .row {
-    flex-wrap: nowrap;
-  }
-
-  .handler-card {
-    width: 200px;
+  .handler-card img {
+    height: 200px;
   }
 
   .incharge {
-    position: absolute;
-    bottom: 80px;
-    font-size: 16px;
+    position: static !important;
+    margin-top: 30px;
   }
 
-  .incharge.left { left: 40px; }
-  .incharge.right { right: 40px; }
+  .result-wrapper {
+    max-height: none;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 420px) {
+  .handlers-pyramid .row {
+    grid-template-columns: 1fr;
+  }
 }
