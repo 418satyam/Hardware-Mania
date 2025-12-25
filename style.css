@@ -1,4 +1,4 @@
-/* RESET */
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
@@ -6,16 +6,12 @@
   font-family: Arial, sans-serif;
 }
 
-html, body {
-  height: 100%;
-}
-
 body {
   color: white;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
-/* BACKGROUND */
+/* ================= BACKGROUND ================= */
 .bg-video {
   position: fixed;
   inset: 0;
@@ -28,14 +24,14 @@ body {
 .overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.75);
   z-index: -1;
 }
 
-/* PAGE SLIDER */
+/* ================= PAGE SLIDER ================= */
 .pages {
   display: flex;
-  width: 300%;
+  width: 300vw;
   transition: transform 0.5s ease;
 }
 
@@ -56,14 +52,15 @@ body {
 }
 
 .center-content {
-  min-height: 60vh;
+  position: absolute;
+  inset: 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .event-title {
-  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-size: clamp(3rem, 6vw, 5rem);
   text-align: center;
   text-shadow: 0 0 20px cyan;
 }
@@ -73,20 +70,13 @@ body {
 }
 
 .incharge {
+  position: absolute;
+  bottom: 80px;
   font-size: 16px;
-  margin-top: 20px;
-  text-align: center;
 }
 
-/* Desktop positioning */
-@media (min-width: 900px) {
-  .incharge {
-    position: absolute;
-    bottom: 80px;
-  }
-  .incharge.left { left: 40px; }
-  .incharge.right { right: 40px; }
-}
+.incharge.left { left: 40px; }
+.incharge.right { right: 40px; }
 
 /* ================= TITLES ================= */
 .section-title {
@@ -98,23 +88,21 @@ body {
 /* ================= CONTACT ================= */
 .page.contact {
   overflow-y: auto;
-  padding-bottom: 120px;
-  -webkit-overflow-scrolling: touch;
+  padding-bottom: 100px;
 }
 
+/* Desktop pyramid */
 .handlers-pyramid {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 32px;
-  margin-top: 30px;
+  gap: 40px;
 }
 
 .handlers-pyramid .row {
   display: flex;
+  gap: 30px;
   justify-content: center;
-  gap: 24px;
-  flex-wrap: wrap;
 }
 
 .handler-card {
@@ -128,30 +116,20 @@ body {
   object-fit: cover;
   border-radius: 10px;
   border: 2px solid rgba(0,255,255,0.6);
-  box-shadow: 0 0 15px rgba(0,255,255,0.2);
-}
-
-.handler-card h3 {
-  margin-top: 10px;
-  font-size: 15px;
-}
-
-.handler-card p {
-  font-size: 13px;
-  opacity: 0.75;
 }
 
 /* ================= RESULT ================= */
 .page.result {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  -webkit-overflow-scrolling: touch;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .result-wrapper {
   width: 100%;
   max-width: 700px;
+  margin-top: 40px;
+  max-height: 60vh;
   overflow-y: auto;
   border: 1px solid cyan;
 }
@@ -159,7 +137,7 @@ body {
 .result-table {
   width: 100%;
   border-collapse: collapse;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.7);
 }
 
 .result-table th,
@@ -199,36 +177,65 @@ body {
   border-bottom: 2px solid cyan;
 }
 
-/* ================= MOBILE & TABLET FIX ================= */
-@media (max-width: 900px) {
+/* ================================================= */
+/* ================= MOBILE FIX ==================== */
+/* ================================================= */
+@media (max-width: 768px) {
+
+  body {
+    overflow: auto;
+  }
+
+  .pages {
+    flex-direction: column;
+    width: 100vw;
+    transform: none !important;
+  }
+
+  .page {
+    min-height: auto;
+    padding-bottom: 120px;
+  }
+
+  /* HOME FIX */
+  .center-content {
+    position: static;
+    margin-top: 40px;
+  }
+
+  .incharge {
+    position: static;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  /* CONTACT FIX */
+  .handlers-pyramid {
+    gap: 25px;
+  }
 
   .handlers-pyramid .row {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
+    flex-direction: column;
+    align-items: center;
   }
 
   .handler-card {
-    width: 100%;
+    width: 85%;
+    max-width: 260px;
   }
 
   .handler-card img {
     height: 200px;
   }
 
-  .incharge {
-    position: static !important;
-    margin-top: 30px;
-  }
-
+  /* RESULT FIX */
   .result-wrapper {
     max-height: none;
+    width: 90%;
   }
-}
 
-/* Extra small devices */
-@media (max-width: 420px) {
-  .handlers-pyramid .row {
-    grid-template-columns: 1fr;
+  /* TABS FIX */
+  .tabs {
+    position: fixed;
   }
 }
