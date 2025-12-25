@@ -6,9 +6,13 @@
   font-family: Arial, sans-serif;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   color: white;
-  overflow: hidden; /* IMPORTANT: prevents global scroll */
+  overflow-x: hidden;   /* allow vertical scroll */
 }
 
 /* BACKGROUND */
@@ -28,7 +32,7 @@ body {
   z-index: -1;
 }
 
-/* PAGES */
+/* PAGE SLIDER */
 .pages {
   display: flex;
   width: 300vw;
@@ -36,31 +40,30 @@ body {
 }
 
 .page {
-  position: relative;
   width: 100vw;
-  min-height: 100vh;
+  min-height: 100svh; /* mobile-safe viewport */
   padding: 20px;
+  position: relative;
 }
 
-/* HOME (UNCHANGED) */
+/* ================= HOME ================= */
 .top-brand {
   text-align: center;
 }
 
 .top-brand img {
-  width: 140px;
+  width: 120px;
 }
 
 .center-content {
-  position: absolute;
-  inset: 0;
+  min-height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .event-title {
-  font-size: clamp(3rem, 6vw, 5rem);
+  font-size: clamp(2.5rem, 6vw, 5rem);
   text-align: center;
   text-shadow: 0 0 20px cyan;
 }
@@ -70,47 +73,49 @@ body {
 }
 
 .incharge {
-  position: absolute;
-  bottom: 80px;
-  font-size: 20px;
+  font-size: 16px;
+  margin-top: 20px;
+  text-align: center;
 }
 
-.incharge.left { left: 40px; }
-.incharge.right { right: 40px; }
+/* desktop-only absolute positioning */
+@media (min-width: 900px) {
+  .incharge {
+    position: absolute;
+    bottom: 80px;
+  }
+  .incharge.left { left: 40px; }
+  .incharge.right { right: 40px; }
+}
 
-/* SECTION TITLE */
+/* ================= TITLES ================= */
 .section-title {
   text-align: center;
   margin: 20px 0;
   font-size: 2rem;
 }
 
-/* ============================= */
-/* CONTACT PAGE — ONLY SCROLLS */
-/* ============================= */
+/* ================= CONTACT ================= */
 .page.contact {
-  overflow-y: auto;      /* ONLY this page scrolls */
-  max-height: 100vh;
-  padding-bottom: 100px; /* space for bottom tabs */
+  overflow-y: auto;
+  padding-bottom: 120px;
 }
 
-/* PYRAMID LAYOUT */
 .handlers-pyramid {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 32px;
   margin-top: 30px;
 }
 
 .handlers-pyramid .row {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  flex-wrap: nowrap;
+  gap: 24px;
+  flex-wrap: wrap;
 }
 
-/* HANDLER CARD */
 .handler-card {
   width: 200px;
   text-align: center;
@@ -123,18 +128,11 @@ body {
   border-radius: 10px;
   border: 2px solid rgba(0,255,255,0.6);
   box-shadow: 0 0 15px rgba(0,255,255,0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.handler-card img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px cyan;
 }
 
 .handler-card h3 {
   margin-top: 10px;
   font-size: 15px;
-  font-weight: 600;
 }
 
 .handler-card p {
@@ -142,14 +140,16 @@ body {
   opacity: 0.75;
 }
 
-/* RESULT PAGE (UNCHANGED) */
+/* ================= RESULT ================= */
 .page.result {
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .result-wrapper {
+  width: 100%;
   max-width: 700px;
-  margin: 0 auto;
   max-height: 60vh;
   overflow-y: auto;
   border: 1px solid cyan;
@@ -173,7 +173,8 @@ body {
   position: sticky;
   top: 0;
 }
-/* TABS */
+
+/* ================= TABS ================= */
 .tabs {
   position: fixed;
   bottom: 0;
@@ -181,6 +182,7 @@ body {
   display: flex;
   justify-content: space-around;
   background: rgba(0,0,0,0.9);
+  z-index: 10;
 }
 
 .tabs button {
@@ -189,7 +191,6 @@ body {
   color: white;
   padding: 14px;
   font-size: 16px;
-  cursor: pointer;
 }
 
 .tabs button.active {
@@ -197,29 +198,17 @@ body {
   border-bottom: 2px solid cyan;
 }
 
-/* RESPONSIVE — EVENT HANDLER ONLY */
-@media (max-width: 900px) {
-  .handlers-pyramid .row {
-    flex-wrap: wrap;
-    max-width: 90%;
-  }
-
-  .handler-card {
-    width: 180px;
-  }
-}
-
-@media (max-width: 500px) {
-  .handlers-pyramid {
-    gap: 25px;
-  }
-
-  .handlers-pyramid .row {
-    flex-direction: column;
-    align-items: center;
+/* ================= MOBILE FIXES ================= */
+@media (max-width: 600px) {
+  .event-title {
+    font-size: 2.5rem;
   }
 
   .handler-card {
     width: 220px;
+  }
+
+  .result-wrapper {
+    max-height: 55vh;
   }
 }
