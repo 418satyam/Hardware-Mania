@@ -6,40 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-  <!-- Background -->
-  <video class="bg-video" autoplay muted loop playsinline>
-    <source src="assets/bg-video.mp4" type="video/mp4">
-  </video>
-  <div class="overlay"></div>
+<!-- Background -->
+<video class="bg-video" autoplay muted loop playsinline>
+  <source src="assets/bg-video.mp4" type="video/mp4">
+</video>
+<div class="overlay"></div>
 
-  <!-- Pages -->
-  <div class="pages" id="pages">
+<!-- Pages -->
+<div class="pages" id="pages">
 
-    <!-- HOME -->
-    <section class="page home">
-      <div class="top-brand">
-        <img src="assets/college-logo.jpg" alt="College Logo">
-        <h2>Ramanand Arya D.A.V College (Autonomous)</h2>
-      </div>
+  <!-- HOME -->
+  <section class="page home">
+    <img class="logo" src="assets/college-logo.jpg">
+    <h2 class="college">Ramanand Arya D.A.V College</h2>
 
-      <div class="center-content">
-        <h1 class="event-title">HARDWARE<br><span>MANIA</span></h1>
-      </div>
+    <h1 class="event-title">
+      HARDWARE<br><span>MANIA</span>
+    </h1>
 
-      <div class="incharge left">
-        <h4>Event In-Charge</h4>
-        <p>Swati Kemkar </p>
-      </div>
+    <div class="incharge-box">
+      <p><strong>Mr. A. Kumar</strong></p>
+      <p><strong>Ms. S. Sharma</strong></p>
+    </div>
+  </section>
 
-      <div class="incharge right">
-        <h4>Event In-Charge</h4>
-        <p>Suvarna Mali</p>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
+ <!-- CONTACT -->
     <section class="page contact">
       <h1 class="section-title">EVENT HANDLERS</h1>
 
@@ -81,10 +75,9 @@
       </div>
     </section>
 
-    <!-- RESULT -->
-    <!-- RESULT -->
+  <!-- RESULT -->
   <section class="page result">
-    <h1 class="section-title">QUALIFIED PARTICIPANTS</h1>
+    <h1 class="section-title">QUALIFIED STUDENTS</h1>
 
     <div class="result-wrapper">
       <table class="result-table">
@@ -95,9 +88,7 @@
           </tr>
         </thead>
         <tbody id="resultList">
-          <tr>
-            <td colspan="2">Results coming soon</td>
-          </tr>
+          <tr><td colspan="2">Coming Soon</td></tr>
         </tbody>
       </table>
     </div>
@@ -105,14 +96,13 @@
 
 </div>
 
+<!-- Tabs -->
+<nav class="tabs">
+  <button onclick="goToPage(0)" class="active">Home</button>
+  <button onclick="goToPage(1)">Handlers</button>
+  <button onclick="goToPage(2)">Result</button>
+</nav>
 
-  <!-- Tabs -->
-  <nav class="tabs">
-    <button class="active" onclick="goToPage(0)">Home</button>
-    <button onclick="goToPage(1)">Contact</button>
-    <button onclick="goToPage(2)">Result</button>
-  </nav>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
