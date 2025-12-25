@@ -1,0 +1,6 @@
+{
+  "students": [
+    { "name": "Rahul Kumar", "college": "DAV College" },
+    { "name": "Ankit Sharma", "college": "XYZ Institute" }
+  ]
+}
