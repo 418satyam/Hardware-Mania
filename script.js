@@ -1,28 +1,24 @@
-function goToPage(index) {
-  const pages = document.getElementById("pages");
-  const buttons = document.querySelectorAll(".tabs button");
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tabs button').forEach(b => b.classList.remove('active'));
 
-  pages.style.transform = `translateX(-${index * 100}vw)`;
-
-  buttons.forEach(btn => btn.classList.remove("active"));
-  buttons[index].classList.add("active");
+  document.getElementById(id).classList.add('active');
+  event.target.classList.add('active');
 }
 
 // Load results
 fetch("result.json")
-  .then(res => res.json())
+  .then(r => r.json())
   .then(data => {
     const tbody = document.getElementById("resultList");
     tbody.innerHTML = "";
 
-    if (!data.students || data.students.length === 0) {
-      tbody.innerHTML = `<tr><td colspan="2">Coming Soon</td></tr>`;
+    if (!data.length) {
+      tbody.innerHTML = `<tr><td colspan="2">Results coming soon</td></tr>`;
       return;
     }
 
-    data.students.forEach(s => {
-      const row = document.createElement("tr");
-      row.innerHTML = `<td>${s.name}</td><td>${s.college}</td>`;
-      tbody.appendChild(row);
+    data.forEach(s => {
+      tbody.innerHTML += `<tr><td>${s.name}</td><td>${s.college}</td></tr>`;
     });
   });
