@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
 <!-- Background -->
@@ -15,92 +14,72 @@
 </video>
 <div class="overlay"></div>
 
-<!-- Pages -->
-<div class="pages" id="pages">
+<!-- HOME -->
+<section class="page active" id="home">
+  <img src="assets/college-logo.jpg" class="logo">
+  <h2 class="college">Ramanand Arya D.A.V College (Autonomous)</h2>
 
-  <!-- HOME -->
-  <section class="page home">
-    <img class="logo" src="assets/college-logo.jpg">
-    <h2 class="college">Ramanand Arya D.A.V College</h2>
+  <h1 class="event">
+    HARDWARE<br><span>MANIA</span>
+  </h1>
 
-    <h1 class="event-title">
-      HARDWARE<br><span>MANIA</span>
-    </h1>
+  <div class="coordinators">
+    <p><strong>Event In-Charge</strong></p>
+    <p>Swati Kemkar</p>
+    <p>Suvarna Mali</p>
+  </div>
+</section>
 
-    <div class="incharge-box">
-      <p><strong>Mr. A. Kumar</strong></p>
-      <p><strong>Ms. S. Sharma</strong></p>
+<!-- HANDLERS -->
+<section class="page" id="handlers">
+  <h1 class="title">EVENT HANDLERS</h1>
+
+  <div class="hierarchy">
+    <h3>Event Head</h3>
+    <div class="card">
+      <img src="assets/handlers/h1.jpg">
+      <p>Name 1</p>
     </div>
-  </section>
 
- <!-- CONTACT -->
-    <section class="page contact">
-      <h1 class="section-title">EVENT HANDLERS</h1>
-
-      <div class="handlers-pyramid">
-
-        <div class="row">
-          <div class="handler-card">
-            <img src="assets/handlers/h1.jpg">
-            <h3>Name 1</h3>
-            <p>Lead Coordinator</p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="handler-card"><img src="assets/handlers/h1.jpg"><h3>Name 2</h3><p>Core Team</p></div>
-          <div class="handler-card"><img src="assets/handlers/h1.jpg"><h3>Name 3</h3><p>Core Team</p></div>
-          
-        </div>
-
-        <div class="row">
-          <div class="handler-card"><img src="assets/handlers/h1.jpg"><h3>Name 4</h3><p>Support</p></div>
-          <div class="handler-card"><img src="assets/handlers/h1.jpg"><h3>Name 5</h3><p>Support</p></div>
-          <div class="handler-card"><img src="assets/handlers/h1.jpg"><h3>Name 6</h3><p>Support</p></div>
-        </div>
-
-        <div class="row">
-          <div class="handler-card"><img src="assets/handlers/h1.jpg"><h3>Name 7</h3><p>Volunteer</p></div>
-          <div class="handler-card"><img src="assets/handlers/h1.jpg"><h3>Name 8</h3><p>Volunteer</p></div>
-          <div class="handler-card"><img src="assets/handlers/h1.jpg"><h3>Name 9</h3><p>Volunteer</p></div>
-        </div>
-
-        <div class="row">
-          <div class="handler-card"><img src="assets/handlers/h1.jpg"><h3>Name 10</h3><p>Volunteer</p></div>
-          <div class="handler-card"><img src="assets/handlers/h1.jpg"><h3>Name 11</h3><p>Volunteer</p></div>
-          <div class="handler-card"><img src="assets/handlers/h1.jpg"><h3>Name 12</h3><p>Volunteer</p></div>
-          <div class="handler-card"><img src="assets/handlers/h1.jpg"><h3>Name 13</h3><p>Volunteer</p></div>
-        </div>
-
-      </div>
-    </section>
-
-  <!-- RESULT -->
-  <section class="page result">
-    <h1 class="section-title">QUALIFIED STUDENTS</h1>
-
-    <div class="result-wrapper">
-      <table class="result-table">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>College</th>
-          </tr>
-        </thead>
-        <tbody id="resultList">
-          <tr><td colspan="2">Coming Soon</td></tr>
-        </tbody>
-      </table>
+    <h3>Assistants</h3>
+    <div class="grid">
+      <div class="card"><img src="assets/handlers/h2.jpg"><p>Name 2</p></div>
+      <div class="card"><img src="assets/handlers/h3.jpg"><p>Name 3</p></div>
     </div>
-  </section>
 
-</div>
+    <h3>Volunteers</h3>
+    <div class="grid">
+      <div class="card"><img src="assets/handlers/h4.jpg"><p>Name 4</p></div>
+      <div class="card"><img src="assets/handlers/h5.jpg"><p>Name 5</p></div>
+      <div class="card"><img src="assets/handlers/h6.jpg"><p>Name 6</p></div>
+    </div>
+  </div>
+</section>
 
-<!-- Tabs -->
+<!-- RESULT -->
+<section class="page" id="result">
+  <h1 class="title">QUALIFIED PARTICIPANTS</h1>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>College</th>
+        </tr>
+      </thead>
+      <tbody id="resultList">
+        <tr><td colspan="2">Results coming soon</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- TABS -->
 <nav class="tabs">
-  <button onclick="goToPage(0)" class="active">Home</button>
-  <button onclick="goToPage(1)">Handlers</button>
-  <button onclick="goToPage(2)">Result</button>
+  <button onclick="showPage('home')" class="active">Home</button>
+  <button onclick="showPage('handlers')">Handlers</button>
+  <button onclick="showPage('result')">Result</button>
 </nav>
 
 <script src="script.js"></script>
