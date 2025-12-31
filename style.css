@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  color: #fff;
+  background: #000;
+}
+
+/* Background */
+.bg-video {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  z-index: -1;
+}
+
+/* Tabs */
+.tabs {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  background: rgba(0,0,0,0.95);
+}
+.tabs button {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  background: none;
+  color: white;
+  font-size: 15px;
+}
+.tabs button.active {
+  color: cyan;
+  border-top: 2px solid cyan;
+}
+
+/* Pages */
+.page {
+  display: none;
+  padding: 25px 15px 90px;
+}
+.page.active {
+  display: block;
+}
+
+/* Home */
+.college-logo {
+  width: 120px;
+  display: block;
+  margin: 20px auto;
+}
+.college-name {
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.85;
+}
+.event-title {
+  text-align: center;
+  font-size: 42px;
+  margin: 40px 0;
+}
+.event-title span {
+  color: cyan;
+}
+.coordinators {
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Volunteers */
+.section-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.group {
+  margin-bottom: 30px;
+}
+.group h3 {
+  text-align: center;
+  margin-bottom: 12px;
+  color: cyan;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 15px;
+}
+.card {
+  background: rgba(0,0,0,0.6);
+  padding: 10px;
+  text-align: center;
+  border: 1px solid cyan;
+}
+.card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+.card p {
+  font-size: 14px;
+}
+.card span {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* Result */
+.table-wrapper {
+  max-height: 60vh;
+  overflow-y: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid rgba(0,255,255,0.3);
+  text-align: center;
+}
+th {
+  background: rgba(0,255,255,0.2);
+  position: sticky;
+  top: 0;
+}

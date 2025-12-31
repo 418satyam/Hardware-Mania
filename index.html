@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hardware Mania</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Background -->
+<video class="bg-video" autoplay muted loop playsinline>
+  <source src="assets/bg-video.mp4" type="video/mp4">
+</video>
+<div class="overlay"></div>
+
+<!-- NAV TABS -->
+<nav class="tabs">
+  <button class="active" data-page="home">Home</button>
+  <button data-page="handlers">Volunteers</button>
+  <button data-page="result">Result</button>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="page active">
+  <img src="assets/college-logo.jpg" class="college-logo">
+  <h2 class="college-name">Ramanand Arya D.A.V College (Autonomous)</h2>
+
+  <h1 class="event-title">
+    HARDWARE <span>MANIA</span>
+  </h1>
+
+  <div class="coordinators">
+    <p><strong>Event In-Charge</strong></p>
+    <p>Swati Kemkar</p>
+    <p>Suvarna Mali</p>
+  </div>
+</section>
+
+<!-- VOLUNTEERS -->
+<section id="handlers" class="page">
+  <h2 class="section-title">Event Volunteers</h2>
+
+  <!-- HEAD -->
+  <div class="group">
+    <h3>Event Head</h3>
+    <div class="card">
+      <img src="assets/handlers/h1.jpg">
+      <p>Name 1</p>
+      <span>Lead Coordinator</span>
+    </div>
+  </div>
+
+  <!-- ASSISTANTS -->
+  <div class="group">
+    <h3>Assistants</h3>
+    <div class="grid">
+      <div class="card"><img src="assets/handlers/h1.jpg"><p>Name 2</p><span>Assistant</span></div>
+      <div class="card"><img src="assets/handlers/h1.jpg"><p>Name 3</p><span>Assistant</span></div>
+    </div>
+  </div>
+
+  <!-- VOLUNTEERS (13 TOTAL – adjust names later) -->
+  <div class="group">
+    <h3>Volunteers</h3>
+    <div class="grid">
+      <div class="card"><img src="assets/handlers/h1.jpg"><p>Name 4</p><span>Volunteer</span></div>
+      <div class="card"><img src="assets/handlers/h1.jpg"><p>Name 5</p><span>Volunteer</span></div>
+      <div class="card"><img src="assets/handlers/h1.jpg"><p>Name 6</p><span>Volunteer</span></div>
+      <div class="card"><img src="assets/handlers/h1.jpg"><p>Name 7</p><span>Volunteer</span></div>
+      <div class="card"><img src="assets/handlers/h1.jpg"><p>Name 8</p><span>Volunteer</span></div>
+      <div class="card"><img src="assets/handlers/h1.jpg"><p>Name 9</p><span>Volunteer</span></div>
+      <div class="card"><img src="assets/handlers/h1.jpg"><p>Name 10</p><span>Volunteer</span></div>
+      <div class="card"><img src="assets/handlers/h1.jpg"><p>Name 11</p><span>Volunteer</span></div>
+      <div class="card"><img src="assets/handlers/h1.jpg"><p>Name 12</p><span>Volunteer</span></div>
+      <div class="card"><img src="assets/handlers/h1.jpg"><p>Name 13</p><span>Volunteer</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULT -->
+<section id="result" class="page">
+  <h2 class="section-title">Qualified Participants</h2>
+
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>College</th>
+        </tr>
+      </thead>
+      <tbody id="resultBody">
+        <tr>
+          <td colspan="2">Results Coming Soon</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
