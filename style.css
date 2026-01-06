@@ -63,7 +63,15 @@ html, body {
   width: 190px;              /* ⬆️ increased */
   height: auto;
   margin-bottom: 16px;
+
 }
+.event-title {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  margin: 16px 0;
+}
+
 
 .college {
   font-size: 1.2rem;         /* ⬆️ increased */
@@ -201,6 +209,13 @@ html, body {
   letter-spacing: 0.4px;
   color: #ffffff;
   text-shadow: 0 0 6px rgba(0,255,231,0.3);
+}
+.group h3 {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #88ffff;
+  margin: 12px 0 16px;
 }
 
 
