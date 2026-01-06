@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hardware Mania</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- BACKGROUND VIDEO -->
+  <video class="bg-video" autoplay muted loop playsinline>
+    <source src="assets/bg-video.mp4" type="video/mp4">
+  </video>
+  <div class="overlay"></div>
+
+  <!-- APP -->
+  <main class="app">
+
+    <!-- HOME -->
+    <section id="home" class="page active">
+      <div class="home-center">
+        <img src="assets/college-logo.jpg" class="logo" alt="College Logo">
+        <h2 class="college">Ramanand Arya D.A.V College (Autonomous)</h2>
+        <h1 class="event">HARDWARE MANIA</h1>
+        <div class="coords">
+  <h4>Event-Incharge</h4>
+  <div class="coord-grid">
+    <span>Suvarna Mali</span>
+    <span>Vaishali Gavandi</span>
+    <span>Suryaprakash Upadhyay</span>
+    <span>Amruta Joshi</span>
+  </div>
+</div>
+
+      </div>
+    </section>
+
+    <!-- VOLUNTEERS -->
+    <section id="volunteers" class="page scrollable">
+      <h2 class="title">Event Team</h2>
+
+      <div class="group"><center>
+        <h3>Event Head</h3></center>
+        <div class="grid one">
+          <div class="card">
+            <img src="assets/handlers/h1.jpg" alt="Event Head">
+            <p>Shreyash</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="group">
+        <center> <h3>Assistants</h3></center>
+       
+        <div class="grid two">
+          <div class="card"><img src="assets/handlers/h1.jpg"><p>Satyam</p></div>
+          <div class="card"><img src="assets/handlers/h2.png"><p>Sai</p></div>
+        </div>
+      </div>
+      <div class="group"><center>
+        <h3>Help Team</h3>
+      </center>
+        <div class="grid two">
+          <div class="card"><img src="assets/handlers/h1.jpg"><p>Harashad</p></div>
+          <div class="card"><img src="assets/handlers/h1.jpg"><p>Yashwant</p></div>
+          
+           </div>
+      </div>
+      <div class="group">
+        <h3></h3>
+        <div class="grid one">
+          <div class="card">
+            <img src="assets/handlers/h1.jpg" alt="Event Head">
+            <p>Shreya</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="group"><center>
+        <h3>Support Team</h3></center>
+        <div class="grid two">
+          <div class="card"><img src="assets/handlers/h1.jpg"><p>V1</p></div>
+          <div class="card"><img src="assets/handlers/h1.jpg"><p>V2</p></div>
+          <div class="card"><img src="assets/handlers/h1.jpg"><p>V3</p></div>
+          <div class="card"><img src="assets/handlers/h1.jpg"><p>V4</p></div>
+          <div class="card"><img src="assets/handlers/h1.jpg"><p>V5</p></div>
+          <div class="card"><img src="assets/handlers/h1.jpg"><p>V6</p></div>
+          <div class="card"><img src="assets/handlers/h1.jpg"><p>V7</p></div>
+          <div class="card"><img src="assets/handlers/h1.jpg"><p>V8</p></div>
+          <div class="card"><img src="assets/handlers/h1.jpg"><p>V9</p></div>
+          <div class="card"><img src="assets/handlers/h1.jpg"><p>satyam<br>support</p></div>
+          <br>
+          <br><br>
+          
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section id="results" class="page">
+  <h2 class="title">Results</h2>
+
+  <div class="results-box">
+
+    <!-- Default message -->
+    <p id="resultStatus" class="coming">
+      Results Coming Soon
+    </p>
+
+    <!-- Table wrapper -->
+    <div class="table-wrapper hidden" id="resultsTable">
+      <table>
+        <thead>
+          <tr>
+            <th>Student Name</th>
+            <th>College Name</th>
+          </tr>
+        </thead>
+        <tbody id="resultsBody"></tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+
+  </main>
+
+  <!-- BOTTOM NAV -->
+  <nav class="bottom-nav">
+    <button data-tab="home" class="active">Home</button>
+    <button data-tab="volunteers">Team</button>
+    <button data-tab="results">Result</button>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>

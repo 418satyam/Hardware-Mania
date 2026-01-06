@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  font-family: system-ui, sans-serif;
+  background: transparent;
+  color: #eaffff;
+}
+
+/* BACKGROUND VIDEO */
+.bg-video {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: -1;
+}
+
+/* APP */
+.app {
+  height: calc(100vh - 64px);
+}
+
+/* PAGES */
+.page {
+  height: 100%;
+  display: none;
+  padding: 18px;
+}
+
+.page.active {
+  display: block;
+}
+
+.page.scrollable {
+  overflow-y: auto;
+}
+
+/* HOME */
+.home-center {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.logo {
+  width: 190px;              /* ⬆️ increased */
+  height: auto;
+  margin-bottom: 16px;
+}
+
+.college {
+  font-size: 1.2rem;         /* ⬆️ increased */
+  font-weight: 700;
+  opacity: 0.9;
+}
+
+.event {
+  font-size: 2.4rem;
+  margin: 14px 0;
+  font-weight: 800;
+  color: #00ffe7;
+}
+
+.coords {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* TITLES */
+.title {
+  text-align: center;
+  margin-bottom: 18px;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #00ffe7;
+  text-shadow: 0 0 8px rgba(0,255,231,0.35);
+}
+
+/* VOLUNTEERS */
+.group {
+  margin-bottom: 28px;
+}
+
+.group h3 {
+  font-size: 1.25rem;        /* ⬆️ increased */
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: #9ffcff;
+}
+.coords {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.coords h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #9ffcff;
+  letter-spacing: 0.5px;
+}
+
+.coord-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 8px 24px;           /* row-gap | column-gap */
+  justify-content: center;
+}
+
+.coord-grid span {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 0 0 5px rgba(0,255,231,0.25);
+}
+.coords {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.coords h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #9ffcff;
+  letter-spacing: 0.5px;
+}
+
+.coord-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 8px 24px;           /* row-gap | column-gap */
+  justify-content: center;
+}
+
+.coord-grid span {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 0 0 5px rgba(0,255,231,0.25);
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  gap: 18px;
+}
+
+.grid.one {
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.grid.two {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* CARDS */
+.card {
+  text-align: center;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:active {
+  transform: scale(0.96);
+  box-shadow: 0 0 18px rgba(0,255,231,0.6);
+}
+
+/* IMAGE */
+.card img {
+  width: 100%;
+  max-width: 200px;          /* ⬆️ increased */
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 20px;
+}
+
+/* NAME */
+.card p {
+  margin-top: 12px;
+  font-size: 1.2rem;         /* ⬆️ increased */
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(0,255,231,0.3);
+}
+
+
+/* RESULTS */
+.results-box {
+  height: calc(100% - 56px);
+  display: flex;
+  flex-direction: column;
+}
+
+.coming {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.table-wrapper {
+  flex: 1;
+  overflow-y: auto;
+  margin-top: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  background: rgba(5, 11, 15, 0.95);
+  color: #00ffe7;
+  font-weight: 700;
+  border-bottom: 1px solid #00ffe7;
+}
+
+th, td {
+  padding: 10px;
+  font-size: 0.95rem;
+  text-align: left;
+  word-break: break-word;
+}
+
+.hidden {
+  display: none;
+}
+
+/* BOTTOM NAV */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 64px;
+  display: flex;
+  background: #050b0f;
+  border-top: 1px solid #00ffe7;
+}
+
+.bottom-nav button {
+  flex: 1;
+  background: none;
+  border: none;
+  color: #88ffff;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.bottom-nav button.active {
+  color: #00ffe7;
+}
