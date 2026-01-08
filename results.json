@@ -1,30 +1,27 @@
 [
   {
-    "name": "Aditya Suraj",
+    "position": "First Prize",
+    "name": "Piyush Kangutkar",
     "college": "Ramanand Arya D.A.V College"
   },
   {
-    "name": "Ravi Mourya",
-    "college": "Ramanand Arya D.A.V College"
-  },
-  {
-    "name": "Abhishek Chauhan",
-    "college": "Ramanand Arya D.A.V College"
-  },
-  {
+    "position": "Second Prize",
     "name": "Iqra Solkar",
     "college": "Ramanand Arya D.A.V College"
   },
   {
+    "position": "Runner Up",
+    "name": "Aditya Suraj",
+    "college": "Ramanand Arya D.A.V College"
+  },
+  {
+    "position": "Runner Up",
     "name": "Bhavna Kumavat",
     "college": "Ramanand Arya D.A.V College"
   },
   {
-    "name": "Mohammad Khan",
-    "college": "Ramanand Arya D.A.V College"
-  },
-{
-    "name": "Piyush Kanqutkar",
+    "position": "Runner Up",
+    "name": "Abhishek Chauhan",
     "college": "Ramanand Arya D.A.V College"
   }
 ]

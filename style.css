@@ -286,6 +286,7 @@ html, body {
 
 
 /* RESULTS */
+/* RESULTS */
 .results-box {
   height: calc(100% - 56px);
   display: flex;
@@ -296,14 +297,14 @@ html, body {
   margin-top: 40px;
   text-align: center;
   font-size: 1.2rem;
-  font-weight: 600;
-  opacity: 0.7;
+  font-weight: 700;
+  opacity: 0.75;
 }
 
 .table-wrapper {
   flex: 1;
   overflow-y: auto;
-  margin-top: 10px;
+  margin-top: 12px;
 }
 
 table {
@@ -317,20 +318,33 @@ thead th {
   top: 0;
   background: rgba(5, 11, 15, 0.95);
   color: #00ffe7;
-  font-weight: 700;
+  font-weight: 800;
   border-bottom: 1px solid #00ffe7;
 }
 
 th, td {
-  padding: 10px;
-  font-size: 0.95rem;
+  padding: 12px 10px;
+  font-size: 1rem;
   text-align: left;
   word-break: break-word;
+}
+
+thead th:first-child,
+tbody td:first-child {
+  width: 70px;
+  text-align: center;
+  font-weight: 900;
+  color: #00ffe7;
+}
+
+tbody tr {
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .hidden {
   display: none;
 }
+
 
 /* BOTTOM NAV */
 .bottom-nav {

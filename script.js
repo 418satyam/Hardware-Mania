@@ -12,24 +12,31 @@ buttons.forEach(btn => {
   });
 });
 
-// RESULTS (JSON READY)
+// RESULTS LOADING
 fetch('results.json')
-  .then(res => res.json())
+  .then(res => {
+    if (!res.ok) throw new Error('JSON not found');
+    return res.json();
+  })
   .then(data => {
-    if (!data.length) return;
+    if (!Array.isArray(data) || data.length === 0) return;
 
     document.getElementById('resultStatus').classList.add('hidden');
     document.getElementById('resultsTable').classList.remove('hidden');
 
     const body = document.getElementById('resultsBody');
-    data.forEach(r => {
-      body.innerHTML += `
-        <tr>
-          <td>${r.name}</td>
-          <td>${r.college}</td>
-        </tr>`;
+    body.innerHTML = '';
+
+    data.forEach((item, index) => {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${index + 1}</td>
+        <td>${item.name}</td>
+        <td>${item.college}</td>
+      `;
+      body.appendChild(row);
     });
   })
-  .catch(() => {
-    // safe fallback
+  .catch(err => {
+    console.error('Result load error:', err);
   });
