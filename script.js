@@ -12,7 +12,7 @@ buttons.forEach(btn => {
   });
 });
 
-// RESULTS LOADING
+/// RESULTS LOADING
 fetch('results.json')
   .then(res => {
     if (!res.ok) throw new Error('JSON not found');
@@ -32,6 +32,7 @@ fetch('results.json')
       row.innerHTML = `
         <td>${index + 1}</td>
         <td>${item.name}</td>
+        <td>${item.class}</td>
         <td>${item.college}</td>
       `;
       body.appendChild(row);
