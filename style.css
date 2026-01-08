@@ -142,6 +142,72 @@ html, body {
   margin-top: 16px;
   text-align: center;
 }
+/* INFO PAGE */
+#rules {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* MAIN TITLE */
+/* MAIN TITLE */
+#rules .title {
+  text-align: center;
+  font-size: 1.9rem;          /* ⬆ increased */
+  font-weight: 900;
+  color: #00eaff;
+  margin-bottom: 28px;
+  letter-spacing: 1px;
+}
+
+/* INFO BLOCK */
+.info-block {
+  background: rgba(5, 11, 15, 0.6);
+  border-radius: 14px;
+  padding: 20px 22px;         /* ⬆ more breathing space */
+  margin-bottom: 24px;
+}
+
+/* ROUND / SECTION HEADINGS */
+.info-block h3 {
+  text-align: center;
+  font-size: 1.35rem;         /* ⬆ increased */
+  font-weight: 800;
+  color: #6cf2ff;
+  margin-bottom: 14px;
+}
+
+/* SUB TITLE */
+.sub-title {
+  margin-top: 14px;
+  margin-bottom: 10px;
+  font-size: 1.05rem;         /* ⬆ increased */
+  font-weight: 700;
+  color: #00ffe7;
+  text-align: center;
+}
+
+/* LISTS */
+.info-block ul,
+.info-block ol {
+  padding-left: 22px;
+  margin-bottom: 12px;
+}
+
+/* LIST ITEMS (MAIN INFO TEXT) */
+.info-block li {
+  font-size: 1rem;            /* ⬆ THIS IS THE IMPORTANT PART */
+  line-height: 1.7;           /* better readability */
+  margin-bottom: 8px;
+}
+
+/* NOTE TEXT */
+.note {
+  margin-top: 14px;
+  font-size: 1rem;            /* ⬆ increased */
+  text-align: center;
+  color: #eaffff;
+  opacity: 0.95;
+}
 
 .coords h4 {
   font-size: 1.1rem;
